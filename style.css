@@ -247,7 +247,8 @@ header{
 
 .menu-toggle{
     display:none;
-    font-size:28px;
+    font-size:30px;
+    color:#FFD700;
     cursor:pointer;
 }
 
@@ -616,6 +617,86 @@ header{
     }
 
 }
+
+@media(max-width:768px){
+
+    /* HEADER */
+    header{
+        width:100%;
+        left:0;
+    }
+
+
+    .navbar{
+        width:95%;
+        height:75px;
+    }
+
+
+    /* Hamburger Show */
+    .menu-toggle{
+        display:block;
+        color:#FFD700;
+        font-size:30px;
+        cursor:pointer;
+    }
+
+
+    /* Hide Desktop Links */
+    .nav-links{
+
+        position:absolute;
+        top:75px;
+        left:0;
+
+        width:100%;
+
+        background:#000;
+
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+
+        gap:25px;
+        padding:30px 0;
+
+        transform:translateY(-150%);
+        opacity:0;
+        visibility:hidden;
+
+        transition:.4s ease;
+
+    }
+
+
+    /* Open Menu */
+    .nav-links.active{
+
+        transform:translateY(0);
+        opacity:1;
+        visibility:visible;
+
+    }
+
+
+    .nav-links a{
+
+        color:#fff;
+        font-size:18px;
+
+    }
+
+
+    /* Hide Search and Icons */
+    .search-box,
+    .nav-icons{
+
+        display:none;
+
+    }
+
+}
+
 /* =====================================
    CART SIDEBAR
 ===================================== */
